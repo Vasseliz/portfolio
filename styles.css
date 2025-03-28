@@ -60,7 +60,7 @@ header {
   box-shadow: 0 1px 4px gray;
 }
 .linkProfissional i:hover,
-.redondo:hover {
+.redondo:hover  {
   color: black;
   background: white;
 }
