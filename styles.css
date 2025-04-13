@@ -463,7 +463,17 @@ footer p {
       width: 85%;
       margin: 0 auto 1rem;
     }
-
+    .projeto span {
+      font: 200 1rem "Montserrat", sans-serif;
+    }
+    .projeto:focus {
+      transform: scale(1);
+      box-shadow: 0 1px 4px white;
+      border-radius: 12px;
+    }
+    .projeto:hover {
+      display:none;
+    }
 
     /* menu hamburguer funcional */
     .menuBurgao {
