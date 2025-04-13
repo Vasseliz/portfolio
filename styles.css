@@ -471,9 +471,7 @@ footer p {
       box-shadow: 0 1px 4px white;
       border-radius: 12px;
     }
-    .projeto:hover {
-      display:none;
-    }
+
 
     /* menu hamburguer funcional */
     .menuBurgao {
