@@ -26,8 +26,14 @@
               title="link para inicio da pagina"
             /><span>Vasseli</span></a
           >
+            <!-- Header Mobile -->
 
-          <span>|</span>
+
+
+
+
+
+          <span class="divisao">|</span>
           <nav>
             <ul class="primeiroNav">
               <li>
@@ -55,6 +61,11 @@
             </ul>
           </nav>
         </div>
+        <button id="botaoMenu" class="menuBurgao" aria-label="Abrir Menu">
+          <i class="menuHamburguer fa-solid fa-bars"></i>
+        </button>
+        
+       
         <div class="linkProfissional">
           <a
             href="https://github.com/Vasseliz"
@@ -71,6 +82,18 @@
         </div>
       </div>
     </header>
+   
+     <div id="menuSobreposto" class="sobreposicao hidden"></div>
+        
+    
+     <nav id="mobileMenu" class="menuMobile">
+       <ul>
+         <li><a href="#sobreMim">Sobre</a></li>
+         <li><a href="#habilidades">Habilidades</a></li>
+         <li><a href="#projetos">Projetos</a></li>
+         <li><a href="#experiencias">Experiências</a></li>
+       </ul>
+     </nav>
     <main>
       <section id="hero">
         <div class="containerHero">
@@ -294,5 +317,6 @@
     >
       <i class="fa-solid fa-inbox"></i>
     </a>
+    <script src="js.js"></script>
   </body>
 </html>

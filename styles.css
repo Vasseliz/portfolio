@@ -4,10 +4,14 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  scroll-behavior: smooth; /*ver oq ta acontecendo*/
+
   color: white;
 }
+html, body {
+  scroll-behavior: smooth;
+}
 body {
+
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 1) 64px,
@@ -18,6 +22,9 @@ body {
     url("poly-grid-dark.svg");
   background-size: cover;
   background-attachment: fixed;
+  font-size: 16px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 header {
@@ -26,14 +33,14 @@ header {
   z-index: 2;
   position: fixed;
   width: 100vw;
-  height: 64px;
+  height: 4rem;
+  top: 0;
 }
 .conteudoCabecalho {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: auto;
-  padding: 16px;
+  justify-content: space-around;
+  width: 100vw;
+  padding: 1rem;
 }
 .linksNaPagina {
   display: flex;
@@ -46,16 +53,16 @@ header {
   gap: 0.5rem;
 }
 .redondo {
-  border-radius: 20px;
+  border-radius: 1.25rem;
   padding: 0.4rem 2rem;
   background: black;
-  font: 600 16px "Montserrat";
+  font: 600 1rem "Montserrat";
   border: 1px solid white;
 }
 .linkProfissional i {
   border: 1px solid white;
   padding: 0.4rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: black;
   box-shadow: 0 1px 4px gray;
 }
@@ -66,29 +73,35 @@ header {
 }
 
 a img {
-  height: 36px;
-  width: 36px;
-  border-radius: 8px;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 0.5rem;
 }
+
+a {
+    text-decoration: none;
+    color: #fcfafa;
+}
+.nome {
+    display: flex;
+    align-items: center;
+    font: 600 1.4rem "Poppins", sans-serif;
+    gap: 0.8rem;
+}
+.nome span:hover {
+    color: #f56530;
+}
+
 .primeiroNav {
   display: flex;
   list-style: none;
   gap: 2rem;
 }
 
-a {
-  text-decoration: none;
-  color: #fcfafa;
+.menuBurgao, .navMobile {
+    display: none;
 }
-.nome {
-  display: flex;
-  align-items: center;
-  font: 600 23px "Poppins", sans-serif;
-  gap: 0.8rem;
-}
-.nome span:hover {
-  color: #f56530;
-}
+
 
 .containerHero {
   display: flex;
@@ -115,6 +128,7 @@ a {
     border-radius: 20% 50% 90% 60% / 40% 20% 80% 40%;
   }
 }
+
 .decoracaoHero {
   display: flex;
   gap: 1rem;
@@ -153,7 +167,9 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: auto;
 }
+
 .informacoes {
   display: flex;
   justify-content: space-around;
@@ -164,9 +180,7 @@ h2 {
   width: 65vw;
   padding-bottom: 1rem;
 }
-.textoInformacao {
-  /* text-align: justify; */
-}
+
 #sobreMim img {
   width: 45%;
 }
@@ -232,7 +246,7 @@ h3 {
   box-shadow: 0 1px 3px #f0f0f0;
 }
 #habilidades i {
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 .portfolio {
   display: flex;
@@ -285,12 +299,14 @@ h3 {
   margin: 1rem auto 7rem;
   gap: 3rem;
 }
+
 .academico,
 .profissional {
   backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.1);
   text-align: center;
   border-radius: 15px;
+  padding-bottom: 1.5rem;
 }
 .instituicao {
   display: flex;
@@ -298,28 +314,31 @@ h3 {
 }
 .academico {
   flex: 2;
+  
 }
 
 .profissional {
   flex: 1;
 }
 .academico img {
-  width: 16rem;
-  height: 16rem;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   border-radius: 50%;
   padding: 1rem;
+  margin: auto;
 }
 .infnet,
 .ufrj {
   display: flex;
   flex: 1;
   flex-direction: column;
-  font: 500 18px "Montserrat";
+  font: 500 1.1rem "Montserrat";
   background-color: white;
-  max-width: 16rem;
+  max-width: 40%;
   border-radius: 12px;
   margin: 0 0 2rem;
+  text-align: center;
 }
 .graduacao {
   color: black;
@@ -341,18 +360,16 @@ h3 {
 }
 footer {
   display: flex;
-  height: 15vh;
+  padding: 3rem;
   background-color: black;
   align-items: center;
   justify-content: space-between;
-  gap: 15rem;
 }
 footer img,
 footer p {
   height: 2rem;
   border-radius: 8px;
-  margin: 3rem;
-  margin-right: 6rem;
+  margin: 0 calc(4% + 2.1rem) 5% 0;
 }
 .email {
   position: fixed;
@@ -367,3 +384,150 @@ footer p {
   transform: scale(1.2);
   color: white;
 }
+.hidden {
+  display: none;
+}
+.menuMobile {
+  display: none;
+}
+@media screen and (max-width: 850px) {
+    .primeiroNav, .divisao, header .linkProfissional{
+        display: none;
+    }
+   
+    .containerHero {
+        flex-direction: column;
+        gap:7rem;
+        margin-top: 5.6rem;
+        height: auto;
+    }
+    .decoracaoHero{
+        order: 1;
+    }
+    #hero img {
+        order: -1;
+        height: auto;
+        width: 95%;
+        display: inline-block;
+        object-fit: cover;
+    }
+    .conteudoCabecalho {
+        justify-content: space-between;
+        padding: 1rem 3rem;
+    }
+    .containerExperiecias {
+        flex-direction: column;
+        width:90%;
+    }
+    #habilidades {
+      width: 85vw;
+    }
+    .listaHabilidades {
+      flex-wrap: wrap;
+      width: 80%;
+      margin: auto;
+      justify-content: space-evenly;
+      padding: 0.4rem 0.5rem;
+    }
+    .listaHabilidades li {
+      margin: 0.2rem 0;
+      width: 48%;
+      padding: 1rem;
+      
+    }
+    .portfolio{
+      flex-direction: column;
+      width: 90%;
+      margin: auto;
+      gap: 1.5rem
+    }
+    .projeto {
+      width: 96%;
+      max-width: none;
+    }
+    #sobreMim {
+      width: 80vw;
+
+      
+    }
+    .informacoes {
+      flex-direction: column;
+      padding: 0 2rem;
+      margin: auto;
+    }
+    .instituicao {
+      flex-direction: column;
+    }
+    .infnet, .ufrj {
+      max-width: none;
+      width: 85%;
+      margin: 0 auto 1rem;
+    }
+
+
+    /* menu hamburguer funcional */
+    .menuBurgao {
+      display: block;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+      position: relative;
+    }
+    
+    .menuMobile {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background-color: rgb(54, 54, 54) !important;
+      box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+      transform: translateX(+100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      padding-top: 60px;
+    }
+    
+    .menuMobile li {
+      margin: 20px;
+      list-style: none;
+    }
+    
+    .menuMobile a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #ffffff;
+      transition: color 0.2s;
+    }
+    
+    .menuMobile a:hover {
+      color: #007bff;
+    }
+    
+    .menuMobile.open {
+      transform: translateX(0);
+    }
+    
+    .sobreposicao {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+    .pessoais:last-of-type {
+      padding-bottom: 0.5rem;
+      }
+    
+
+}
+
+
+
+
+
