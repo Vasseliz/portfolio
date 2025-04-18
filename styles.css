@@ -42,6 +42,11 @@ header {
   width: 100vw;
   padding: 1rem;
 }
+.conteudoCabecalho .icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 .linksNaPagina {
   display: flex;
   align-items: center;
@@ -369,13 +374,13 @@ footer img,
 footer p {
   height: 2rem;
   border-radius: 8px;
-  margin: 0 calc(4% + 2.1rem) 5% 0;
+  margin: 0.5rem;
 }
-.email {
-  position: fixed;
-  right: 4%;
-  bottom: 5%;
-}
+ footer div {
+  display: flex;
+  align-items: center;
+  
+ }
 .email i {
   color: #f56530;
   font-size: 32px;
@@ -394,7 +399,6 @@ footer p {
     .primeiroNav, .divisao, header .linkProfissional{
         display: none;
     }
-   
     .containerHero {
         flex-direction: column;
         gap:7rem;
@@ -515,6 +519,11 @@ footer p {
       color: #007bff;
     }
     
+    .menuMobile div {
+      position: absolute;
+      bottom: 2rem;
+      left: calc(50% - 1.5rem);
+    }
     .menuMobile.open {
       transform: translateX(0);
     }
@@ -535,7 +544,51 @@ footer p {
 
 }
 
+/* Modo em branco */
 
+body.modoClaro {
+      background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 64px,
+      rgba(0, 0, 0, 0) 64px,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(245, 101, 48, 0.1) 100%
+    ),
+    url("poly-grid-light.svg");
+  }
+  .redondo.modoClaro {
+    background: white;
+    border: 1px solid black;
+  }
+  .linkProfissional.modoClaro i {
+    border: 1px solid rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+  }
+  .linkProfissional.modoClaro i:hover,
+  .redondo.modoClaro:hover  {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+  }
 
-
-
+  a.modoClaro {
+      color: #0e0e0e;
+  }
+  .decoracaoHero.modoClaro span {
+    background-color: rgb(0, 0, 0);
+  }
+  h3.modoClaro {
+    color: #333231;
+    font: 600 23px "Poppins";
+  }
+  .infnet.modoClaro,
+  .ufrj.modoClaro {
+    background-color: rgb(0, 0, 0);
+  }
+  .graduacao.modoClaro {
+    color: rgb(255, 255, 255);
+    padding: 0 1rem 1rem;
+    font: 400 16px "Montserrat", sans-serif;
+  }
+  footer.modoClaro {
+    background-color: rgb(255, 255, 255);
+  }
