@@ -401,9 +401,10 @@ footer p {
     }
     .containerHero {
         flex-direction: column;
-        gap:7rem;
+        gap:4rem;
         margin-top: 5.6rem;
         height: auto;
+        margin-bottom: 2rem;
     }
     .decoracaoHero{
         order: 1;
